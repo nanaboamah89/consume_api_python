@@ -1,11 +1,15 @@
 import requests
 
-def api_get(url):
-    return requests.get(url)
-
-def api_count(url_body):
-    return len(url_body)
-
-def api_get_record(url_body):
-    return url_body.json
-    
+def api_get():
+    response = requests.get('https://jsonplaceholder.typicode.com/todos1')
+    if response.ok:
+        return response
+    else:
+        return None
+        
+def api_count():
+    response = api_get()
+    if response.ok:
+        return len(response.content)
+    else:
+        return None
