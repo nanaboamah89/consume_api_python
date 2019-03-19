@@ -1,5 +1,4 @@
 #test_api_consume.py
-
 import unittest
 from mock import Mock, patch
 from api_consume import api_get, api_count

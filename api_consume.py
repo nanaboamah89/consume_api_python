@@ -1,6 +1,4 @@
-
 import requests
-
 
 def api_get():
     response = requests.get('https://jsonplaceholder.typicode.com/todos1')
@@ -8,7 +6,7 @@ def api_get():
         return response
     else:
         return None
-
+        
 def api_count():
     response = api_get()
     if response.ok:
